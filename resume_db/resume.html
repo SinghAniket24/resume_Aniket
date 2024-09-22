@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Aniket H. Singh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b0637;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for Profile Section */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 120px auto;
+    max-width: 1300px;
+    padding: 30px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.5s forwards;
+}
+
+/* Keyframes for Container Animation */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #0077b6;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: fadeIn 2s ease-out;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 20px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+nav a.active {
+    color: #1b0768;
+    border-bottom: 2px solid #caf0f8;
+}
+
+/* Keyframes for Navigation Bar Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profile Image Styling */
+.profile-image {
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border: 5px solid rgba(0, 191, 255, 0.7);
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.7), 0 0 60px rgba(0, 191, 255, 0.5);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideInImage 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.profile-image:hover {
+    background-clip: padding-box;
+    box-shadow: 0 0 30px rgba(255, 0, 43, 0.9), 0 0 60px rgba(47, 0, 255, 0.7);
+    transform: scale(1.1);
+}
+
+/* Keyframes for Profile Image Animation */
+@keyframes slideInImage {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text Styling for Profile Section */
+.content {
+    max-width: 700px;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: #00bfff;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 1.3em;
+    margin: 15px 0 40px;
+    color: #ddd;
+}
+
+/* Social Media Icon Styling */
+.social-media {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 2.2em;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #00bfff;
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #00bfff, 0 0 30px #00bfff, 0 0 40px #00bfff;
+}
+/* Responsive Media Queries */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        width: 350px;
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav a {
+        font-size: 1em;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="resume.html" class="active">My Profile</a>
+        <a href="personal.html">About Me</a>
+        <a href="qualifications.html">Education & Skills</a>
+        <a href="c.html">Projects</a>
+        <a href="form_resume.html">Contact Me</a>
+    </nav>
+    
+    <!-- Profile Section -->
+    <div class="container">
+        <div class="content">
+            <h1 id="typed-text"></h1>
+            <h2>"Web Developer & Data Analyst"</h2>
+            <p>I'm passionate about building dynamic, user-friendly websites and leveraging data for impactful insights. With skills in Python, C++, R, HTML, Java, and SQL, I enjoy turning ideas into real-life digital experiences while applying data analysis to enhance decision-making. Let's collaborate and bring your next project to life!</p>
+
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <a href="https://twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="profile-image-container">
+            <img src="pp.jpeg" alt="Profile Picture" class="profile-image">
+        </div>
+    </div>
+    <script>
+        const text = "Hey, I’m Aniket Singh.";
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                document.getElementById("typed-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+
+        type();
+    </script>
+</body>
+
+</html>
